@@ -22,16 +22,47 @@ spec:
     spec:
       containers:
       - name: exploratrice
-        image: tricoteuses/exploratrice:latest
+        image: registry.demo1.ailab.infocepo.com/tricoteuses/exploratrice:latest
         imagePullPolicy: IfNotPresent
         env:
         - name: PORT
           value: "3000"
         - name: NODE_ENV
           value: production
+        - name: CANUTES_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: tricoteuses-secrets
+              key: POSTGRES_PASSWORD
+        - name: OIDC_ISSUER
+          value: "https://auth.code4code.eu/realms/tricoteuses"
+        - name: OIDC_AUTHORIZATION_ENDPOINT
+          value: "https://auth.code4code.eu/realms/tricoteuses/protocol/openid-connect/auth"
+        - name: OIDC_TOKEN_ENDPOINT
+          value: "https://auth.code4code.eu/realms/tricoteuses/protocol/openid-connect/token"
+        - name: OIDC_USERINFO_ENDPOINT
+          value: "https://auth.code4code.eu/realms/tricoteuses/protocol/openid-connect/userinfo"
+        - name: OIDC_CLIENT_ID
+          value: exploratrice
+        - name: OIDC_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: tricoteuses-secrets
+              key: OIDC_CLIENT_SECRET
+        - name: OIDC_SESSION_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: tricoteuses-secrets
+              key: OIDC_SESSION_SECRET
+        - name: OIDC_REDIRECT_URI
+          value: "https://exploratrice.demo1.ailab.infocepo.com/callback"
+        - name: OIDC_POST_LOGOUT_REDIRECT_URI
+          value: "https://exploratrice.demo1.ailab.infocepo.com/"
+        - name: SERVER_URL
+          value: "https://exploratrice.demo1.ailab.infocepo.com"
         envFrom:
         - configMapRef:
-            name: tricoteuses-config
+            name: tricoteuses-db-config
         - secretRef:
             name: tricoteuses-secrets
         ports:
@@ -63,7 +94,7 @@ metadata:
     app: exploratrice
 spec:
   ports:
-  - port: 3000
+  - port: 80
     targetPort: 3000
     name: http
   selector:

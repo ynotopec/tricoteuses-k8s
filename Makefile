@@ -1,19 +1,16 @@
-NAMESPACE := tricoteuses
-CLUSTER := demo1
+NAMESPACE := demo1
 
 .PHONY: deploy destroy status
 
 deploy:
 	@echo "Deploying tricoteuses stack to namespace $(NAMESPACE)..."
 	@kubectl apply -f k8s/00-namespace.yaml
-	@kubectl apply -f k8s/01-secrets.yaml --namespace $(NAMESPACE)
 	@kubectl apply -f k8s/02-config.yaml --namespace $(NAMESPACE)
 	@kubectl apply -f k8s/03-postgres.yaml --namespace $(NAMESPACE)
 	@kubectl apply -f k8s/04-typesense.yaml --namespace $(NAMESPACE)
 	@kubectl apply -f k8s/05-moulineuse.yaml --namespace $(NAMESPACE)
 	@kubectl apply -f k8s/06-exploratrice.yaml --namespace $(NAMESPACE)
-	@kubectl apply -f k8s/07-ingress-moulineuse.yaml --namespace $(NAMESPACE)
-	@kubectl apply -f k8s/08-ingress-exploratrice.yaml --namespace $(NAMESPACE)
+	@kubectl apply -f k8s/07-ingress-backup.yaml --namespace $(NAMESPACE)
 	@echo "Deployment complete. Status:"
 	@kubectl -n $(NAMESPACE) get pods
 
@@ -22,14 +19,12 @@ status:
 	@kubectl -n $(NAMESPACE) get ingress
 
 destroy:
-	@kubectl delete -f k8s/08-ingress-exploratrice.yaml --namespace $(NAMESPACE)
-	@kubectl delete -f k8s/07-ingress-moulineuse.yaml --namespace $(NAMESPACE)
+	@kubectl delete -f k8s/07-ingress-backup.yaml --namespace $(NAMESPACE)
 	@kubectl delete -f k8s/06-exploratrice.yaml --namespace $(NAMESPACE)
 	@kubectl delete -f k8s/05-moulineuse.yaml --namespace $(NAMESPACE)
 	@kubectl delete -f k8s/04-typesense.yaml --namespace $(NAMESPACE)
 	@kubectl delete -f k8s/03-postgres.yaml --namespace $(NAMESPACE)
 	@kubectl delete -f k8s/02-config.yaml --namespace $(NAMESPACE)
-	@kubectl delete -f k8s/01-secrets.yaml --namespace $(NAMESPACE)
 	@kubectl delete namespace $(NAMESPACE) --ignore-not-found=true
 
 init-secrets:
