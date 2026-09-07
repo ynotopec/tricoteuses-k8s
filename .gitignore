@@ -9,3 +9,9 @@ k8s/*-secrets.yaml
 .vscode/
 .idea/
 *~
+
+# Secrets backup (contains sensitive data)
+k8s-backup/secrets-*.yaml
+
+# Secrets backup (contains sensitive data)
+k8s-backup/secrets-*.yaml
