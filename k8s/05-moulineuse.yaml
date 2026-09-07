@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moulineuse
+  namespace: tricoteuses
+  labels:
+    app: moulineuse
+    app.kubernetes.io/name: moulineuse
+    app.kubernetes.io/component: mcp
+    app.kubernetes.io/part-of: tricoteuses
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moulineuse
+  template:
+    metadata:
+      labels:
+        app: moulineuse
+        app.kubernetes.io/name: moulineuse
+        app.kubernetes.io/component: mcp
+    spec:
+      containers:
+      - name: moulineuse
+        image: tricoteuses/moulineuse:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: PORT
+          value: "8000"
+        - name: NODE_ENV
+          value: production
+        - name: MCP_HTTP_HOST
+          value: "0.0.0.0"
+        - name: MCP_ALLOWED_HOSTS
+          value: "localhost,moulineuse.demo1.ailab.infocepo.com"
+        - name: MCP_ALLOWED_ORIGINS
+          value: "https://exploratrice.demo1.ailab.infocepo.com,https://moulineuse.demo1.ailab.infocepo.com"
+        - name: MCP_AUTH_REQUIRED
+          value: "true"
+        - name: MCP_AUTH_ISSUER
+          value: "https://auth.code4code.eu/realms/tricoteuses"
+        - name: MCP_AUTH_RESOURCE
+          value: "https://moulineuse.demo1.ailab.infocepo.com/mcp"
+        - name: MCP_AUTH_AUDIENCE
+          value: "https://moulineuse.demo1.ailab.infocepo.com/mcp"
+        - name: MCP_AUTH_AUTHORIZATION_ENDPOINT
+          value: "https://auth.code4code.eu/realms/tricoteuses/protocol/openid-connect/auth"
+        - name: MCP_AUTH_TOKEN_ENDPOINT
+          value: "https://auth.code4code.eu/realms/tricoteuses/protocol/openid-connect/token"
+        - name: MCP_AUTH_JWKS_URL
+          value: "https://auth.code4code.eu/realms/tricoteuses/protocol/openid-connect/certs"
+        envFrom:
+        - configMapRef:
+            name: tricoteuses-config
+        - secretRef:
+            name: tricoteuses-secrets
+        ports:
+        - containerPort: 8000
+          name: http
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+            host: localhost
+          initialDelaySeconds: 5
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+            host: localhost
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "1Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: moulineuse
+  namespace: tricoteuses
+  labels:
+    app: moulineuse
+spec:
+  ports:
+  - port: 8000
+    targetPort: 8000
+    name: http
+  selector:
+    app: moulineuse
+  type: ClusterIP

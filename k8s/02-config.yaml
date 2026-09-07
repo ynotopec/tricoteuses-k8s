@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tricoteuses-config
+  namespace: tricoteuses
+data:
+  CANUTES_DB_HOST: postgres
+  CANUTES_DB_PORT: "5432"
+  CANUTES_DB_NAME: canutes
+  CANUTES_DB_USER: tricoteuses
+  TYPESENSE_HOST: typesense
+  TYPESENSE_PORT: "8108"
+  TYPESENSE_PROTOCOL: https

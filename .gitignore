@@ -1,0 +1,11 @@
+# Secrets - NEVER commit real values
+k8s/*-secrets.yaml
+.env
+
+# Generated
+*.local.yaml
+
+# Editor
+.vscode/
+.idea/
+*~
