@@ -1,12 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: exploratrice-ingress
-  namespace: tricoteuses
+  name: tricoteuses-ingress
+  namespace: demo1
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
@@ -15,7 +14,8 @@ spec:
   tls:
   - hosts:
     - exploratrice.demo1.ailab.infocepo.com
-    secretName: tricoteuses-exploratrice-tls
+    - moulineuse.demo1.ailab.infocepo.com
+    secretName: tricoteuses-tls
   rules:
   - host: exploratrice.demo1.ailab.infocepo.com
     http:
@@ -26,4 +26,14 @@ spec:
           service:
             name: exploratrice
             port:
-              number: 3000
+              number: 80
+  - host: moulineuse.demo1.ailab.infocepo.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: moulineuse
+            port:
+              number: 8000

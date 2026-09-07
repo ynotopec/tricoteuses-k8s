@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: exploratrice
-  namespace: tricoteuses
+  namespace: demo1
   labels:
     app: exploratrice
     app.kubernetes.io/name: exploratrice
@@ -58,7 +58,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: exploratrice
-  namespace: tricoteuses
+  namespace: demo1
   labels:
     app: exploratrice
 spec:

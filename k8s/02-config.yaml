@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: tricoteuses-config
-  namespace: tricoteuses
+  namespace: demo1
 data:
   CANUTES_DB_HOST: postgres
   CANUTES_DB_PORT: "5432"
