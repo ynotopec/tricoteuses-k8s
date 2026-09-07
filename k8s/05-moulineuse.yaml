@@ -4,7 +4,7 @@ metadata:
   name: moulineuse
   namespace: demo1
   labels:
-    app: moulineuse
+    app: tricoteuses-moulineuse
     app.kubernetes.io/name: moulineuse
     app.kubernetes.io/component: mcp
     app.kubernetes.io/part-of: tricoteuses
@@ -12,18 +12,21 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: moulineuse
+      app: tricoteuses-moulineuse
   template:
     metadata:
       labels:
-        app: moulineuse
+        app: tricoteuses-moulineuse
         app.kubernetes.io/name: moulineuse
         app.kubernetes.io/component: mcp
     spec:
       containers:
       - name: moulineuse
-        image: tricoteuses/moulineuse:latest
+        image: registry.demo1.ailab.infocepo.com/tricoteuses/moulineuse:latest
         imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+          name: http
         env:
         - name: PORT
           value: "8000"
@@ -51,43 +54,32 @@ spec:
           value: "https://auth.code4code.eu/realms/tricoteuses/protocol/openid-connect/certs"
         envFrom:
         - configMapRef:
-            name: tricoteuses-config
+            name: tricoteuses-db-config
         - secretRef:
             name: tricoteuses-secrets
-        ports:
-        - containerPort: 8000
-          name: http
         livenessProbe:
-          httpGet:
-            path: /health
-            port: 8000
-            host: localhost
+          exec:
+            command:
+            - node
+            - -e
+            - "require('http').get('http://localhost:8000/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));"
           initialDelaySeconds: 5
           periodSeconds: 30
+          failureThreshold: 3
+          timeoutSeconds: 5
+          successThreshold: 1
         readinessProbe:
-          httpGet:
-            path: /health
-            port: 8000
-            host: localhost
+          exec:
+            command:
+            - node
+            - -e
+            - "require('http').get('http://localhost:8000/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));"
           initialDelaySeconds: 5
           periodSeconds: 10
+          failureThreshold: 3
+          timeoutSeconds: 5
+          successThreshold: 1
         resources:
           limits:
             cpu: "500m"
             memory: "1Gi"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: moulineuse
-  namespace: demo1
-  labels:
-    app: moulineuse
-spec:
-  ports:
-  - port: 8000
-    targetPort: 8000
-    name: http
-  selector:
-    app: moulineuse
-  type: ClusterIP

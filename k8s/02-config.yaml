@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: tricoteuses-config
+  name: tricoteuses-db-config
   namespace: demo1
 data:
   CANUTES_DB_HOST: postgres

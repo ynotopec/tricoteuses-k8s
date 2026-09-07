@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: postgres
+  name: tricoteuses-postgres
   namespace: demo1
   labels:
-    app: postgres
-    app.kubernetes.io/name: postgres
+    app: tricoteuses-postgres
+    app.kubernetes.io/name: tricoteuses-postgres
     app.kubernetes.io/component: database
     app.kubernetes.io/part-of: tricoteuses
 spec:
-  serviceName: postgres
+  serviceName: tricoteuses-postgres
   replicas: 1
   selector:
     matchLabels:
-      app: postgres
+      app: tricoteuses-postgres
   template:
     metadata:
       labels:
-        app: postgres
-        app.kubernetes.io/name: postgres
+        app: tricoteuses-postgres
+        app.kubernetes.io/name: tricoteuses-postgres
         app.kubernetes.io/component: database
     spec:
       containers:
@@ -77,15 +77,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgres
+  name: tricoteuses-postgres
   namespace: demo1
   labels:
-    app: postgres
+    app: tricoteuses-postgres
 spec:
   ports:
   - port: 5432
     targetPort: 5432
     name: postgres
   selector:
-    app: postgres
+    app: tricoteuses-postgres
   type: ClusterIP
