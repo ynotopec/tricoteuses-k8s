@@ -1,0 +1,2240 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-08-28T14:25:02Z"
+    labels:
+      app: agent-instance
+    name: agent-043c38c9-boussad-agent-svc
+    namespace: demo1
+    resourceVersion: "31658175"
+    uid: bbfc2bf0-30c9-4cc5-960d-42332209d19f
+  spec:
+    clusterIP: 10.152.183.51
+    clusterIPs:
+    - 10.152.183.51
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8787
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      agent-instance: boussad-agent
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-08-27T19:12:04Z"
+    labels:
+      app: agent-instance
+    name: agent-0944b375-test-fix-deploy-svc
+    namespace: demo1
+    resourceVersion: "31506611"
+    uid: df038b1e-30bd-4956-bd31-74caca500284
+  spec:
+    clusterIP: 10.152.183.230
+    clusterIPs:
+    - 10.152.183.230
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8787
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      agent-instance: test-fix-deploy
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-07-31T13:38:03Z"
+    labels:
+      app: agent-instance
+    name: agent-894aef29-apacheco-agent-svc
+    namespace: demo1
+    resourceVersion: "26529166"
+    uid: 5aa3d002-e4a2-48bd-bea6-b554c4643a1b
+  spec:
+    clusterIP: 10.152.183.25
+    clusterIPs:
+    - 10.152.183.25
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8787
+    selector:
+      agent-instance: apacheco-agent
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-07-30T23:53:09Z"
+    labels:
+      app: agent-instance
+    name: agent-9ae62006-vjourne-agent-svc
+    namespace: demo1
+    resourceVersion: "26419142"
+    uid: 7491b602-edbc-4d2a-8eb4-0e06d38a721d
+  spec:
+    clusterIP: 10.152.183.89
+    clusterIPs:
+    - 10.152.183.89
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8787
+    selector:
+      agent-instance: vjourne-agent
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-09-04T05:25:00Z"
+    labels:
+      app: agent-instance
+    name: agent-a22e48d7-mi-agent-svc
+    namespace: demo1
+    resourceVersion: "32866701"
+    uid: 2aeec455-7958-4b66-9c54-35628f89748c
+  spec:
+    clusterIP: 10.152.183.201
+    clusterIPs:
+    - 10.152.183.201
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8787
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      agent-instance: mi-agent
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-08-27T19:26:25Z"
+    labels:
+      app: agent-instance
+    name: agent-b0faa0cb-test-no-auth-svc
+    namespace: demo1
+    resourceVersion: "31509006"
+    uid: 378462b2-74b0-4c9b-b29d-7df003a7a91c
+  spec:
+    clusterIP: 10.152.183.248
+    clusterIPs:
+    - 10.152.183.248
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8787
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      agent-instance: test-no-auth
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-08-19T13:20:27Z"
+    labels:
+      app: agent-instance
+    name: agent-d6466a64-community-research-svc
+    namespace: demo1
+    resourceVersion: "29975619"
+    uid: a9ed7f30-5fb9-42f7-a561-3980854b8764
+  spec:
+    clusterIP: 10.152.183.241
+    clusterIPs:
+    - 10.152.183.241
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8787
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      agent-instance: community-research
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"agent-instance"},"name":"agent-db32cfa8-new-agent-svc","namespace":"demo1"},"spec":{"ports":[{"name":"webui","port":80,"protocol":"TCP","targetPort":8787},{"name":"gateway","port":8642,"protocol":"TCP","targetPort":8642}],"selector":{"agent-instance":"new-agent","app":"agent-instance"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-06T16:26:53Z"
+    labels:
+      app: agent-instance
+    name: agent-db32cfa8-new-agent-svc
+    namespace: demo1
+    resourceVersion: "27633795"
+    uid: 0d6d9d1e-a1ca-4971-a044-60a43a840b30
+  spec:
+    clusterIP: 10.152.183.156
+    clusterIPs:
+    - 10.152.183.156
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8787
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      agent-instance: new-agent
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-09-07T08:18:25Z"
+    labels:
+      app: agent-instance
+    name: agent-f02a2703-abigot-agent-svc
+    namespace: demo1
+    resourceVersion: "33429739"
+    uid: 2ac87a27-0acc-422a-9453-fd6a731e3ccd
+  spec:
+    clusterIP: 10.152.183.46
+    clusterIPs:
+    - 10.152.183.46
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8787
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      agent-instance: abigot-agent
+      app: agent-instance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"agents-saas"},"name":"agents-saas-svc","namespace":"demo1"},"spec":{"ports":[{"name":"webui","port":80,"protocol":"TCP","targetPort":8000},{"name":"gateway","port":8642,"protocol":"TCP","targetPort":8642}],"selector":{"app":"agents-saas"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-20T18:55:17Z"
+    labels:
+      app: agents-saas
+    name: agents-saas-svc
+    namespace: demo1
+    resourceVersion: "27648097"
+    uid: 3bf58448-964d-4285-a2a3-4c72351b62b8
+  spec:
+    clusterIP: 10.152.183.212
+    clusterIPs:
+    - 10.152.183.212
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: webui
+      port: 80
+      protocol: TCP
+      targetPort: 8000
+    - name: gateway
+      port: 8642
+      protocol: TCP
+      targetPort: 8642
+    selector:
+      app: agents-saas
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"ai-arch-infocepo-com-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"ai-arch-infocepo-com"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-05T00:09:54Z"
+    name: ai-arch-infocepo-com-svc
+    namespace: demo1
+    resourceVersion: "33010532"
+    uid: 02c9a40d-b7fd-4066-b7fa-cd9a93b19674
+  spec:
+    clusterIP: 10.152.183.52
+    clusterIPs:
+    - 10.152.183.52
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: ai-arch-infocepo-com
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"ai-arch"},"name":"ai-arch-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"ai-arch"}}}
+    creationTimestamp: "2026-08-26T12:19:27Z"
+    labels:
+      app: ai-arch
+    name: ai-arch-svc
+    namespace: demo1
+    resourceVersion: "31268038"
+    uid: 0f949b1e-e1a3-49fd-967d-618710c7b94a
+  spec:
+    clusterIP: 10.152.183.67
+    clusterIPs:
+    - 10.152.183.67
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: ai-arch
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"ai-infra-shop-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"ai-infra-shop"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-08T14:05:09Z"
+    name: ai-infra-shop-svc
+    namespace: demo1
+    resourceVersion: "27987795"
+    uid: d394ba09-f5e4-4837-b795-4c4be5ba1bb4
+  spec:
+    clusterIP: 10.152.183.103
+    clusterIPs:
+    - 10.152.183.103
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: ai-infra-shop
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"ai-news-es"},"name":"ai-news-es-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"ai-news-es"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-13T10:27:07Z"
+    labels:
+      app: ai-news-es
+    name: ai-news-es-svc
+    namespace: demo1
+    resourceVersion: "28872395"
+    uid: 63467eb6-1f90-4420-a77f-3ecaf7a721d9
+  spec:
+    clusterIP: 10.152.183.90
+    clusterIPs:
+    - 10.152.183.90
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: ai-news-es
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"ai-news-ru-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"ai-news-ru"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:25:04Z"
+    name: ai-news-ru-svc
+    namespace: demo1
+    resourceVersion: "22291911"
+    uid: 3698be20-bc11-4f8f-aab5-c049529fab5b
+  spec:
+    clusterIP: 10.152.183.108
+    clusterIPs:
+    - 10.152.183.108
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: ai-news-ru
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-07-11T19:56:10Z"
+    name: ai-standards-svc
+    namespace: demo1
+    resourceVersion: "22826392"
+    uid: 69d5b0b4-ed3a-4383-8c4f-be617563d9f1
+  spec:
+    clusterIP: 10.152.183.217
+    clusterIPs:
+    - 10.152.183.217
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: ai-standards
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"automation-tertiaire-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"automation-tertiaire"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-01T01:22:27Z"
+    name: automation-tertiaire-svc
+    namespace: demo1
+    resourceVersion: "26617121"
+    uid: 3964c30a-b25b-479a-9a35-5031ab195358
+  spec:
+    clusterIP: 10.152.183.145
+    clusterIPs:
+    - 10.152.183.145
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: automation-tertiaire
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"benchmark-endpoints-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"benchmark-endpoints"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-16T19:08:54Z"
+    name: benchmark-endpoints-svc
+    namespace: demo1
+    resourceVersion: "23720159"
+    uid: 7939405f-3dc0-4638-98a5-2a8e94770c86
+  spec:
+    clusterIP: 10.152.183.65
+    clusterIPs:
+    - 10.152.183.65
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: benchmark-endpoints
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"bge-m3-article-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"bge-m3-article"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:26:14Z"
+    name: bge-m3-article-svc
+    namespace: demo1
+    resourceVersion: "22291927"
+    uid: 925b2f67-4270-453f-a6a2-05fe48b03ce2
+  spec:
+    clusterIP: 10.152.183.208
+    clusterIPs:
+    - 10.152.183.208
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: bge-m3-article
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"eval-dashboard"},"name":"eval-dashboard","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"eval-dashboard"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-04T09:00:22Z"
+    labels:
+      app: eval-dashboard
+    name: eval-dashboard
+    namespace: demo1
+    resourceVersion: "27216918"
+    uid: 49e285a6-ea2f-4ada-a7a0-7446c9c598d4
+  spec:
+    clusterIP: 10.152.183.33
+    clusterIPs:
+    - 10.152.183.33
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: eval-dashboard
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"exploratrice"},"name":"exploratrice-svc","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":3000,"targetPort":3000}],"selector":{"app":"exploratrice"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:17:53Z"
+    labels:
+      app: exploratrice
+    name: exploratrice-svc
+    namespace: demo1
+    resourceVersion: "33438378"
+    uid: b5479a3d-eaac-4cc6-b283-afd94268e22f
+  spec:
+    clusterIP: 10.152.183.205
+    clusterIPs:
+    - 10.152.183.205
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app: exploratrice
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"finitude","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"finitude"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T23:55:46Z"
+    name: finitude
+    namespace: demo1
+    resourceVersion: "22316681"
+    uid: 220e46e1-4e1d-4213-9481-54835736ee05
+  spec:
+    clusterIP: 10.152.183.234
+    clusterIPs:
+    - 10.152.183.234
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: finitude
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"infocepo-avance-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"infocepo-avance"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:25:12Z"
+    name: infocepo-avance-svc
+    namespace: demo1
+    resourceVersion: "22291958"
+    uid: d6faa7d1-adf8-45d7-b232-445cd8f3abe3
+  spec:
+    clusterIP: 10.152.183.214
+    clusterIPs:
+    - 10.152.183.214
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: infocepo-avance
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"infocepo-mcp","endpointslice.kubernetes.io/managed-by":"staff"},"name":"infocepo-mcp-ext","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":9100,"protocol":"TCP","targetPort":9100}],"selector":{"app":"infocepo-mcp"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-07T09:36:12Z"
+    labels:
+      app: infocepo-mcp
+      endpointslice.kubernetes.io/managed-by: staff
+    name: infocepo-mcp-ext
+    namespace: demo1
+    resourceVersion: "28386977"
+    uid: 3b3bcd1b-20bc-4930-9b8a-79383b8af961
+  spec:
+    clusterIP: 10.152.183.254
+    clusterIPs:
+    - 10.152.183.254
+    externalIPs:
+    - 10.0.1.1
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 9100
+      protocol: TCP
+      targetPort: 9100
+    selector:
+      app: infocepo-mcp
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"infocepo-mcp"},"name":"infocepo-mcp-proxy","namespace":"demo1"},"spec":{"ports":[{"name":"http","nodePort":30910,"port":9100,"protocol":"TCP","targetPort":9100}],"type":"NodePort"}}
+    creationTimestamp: "2026-08-10T18:44:40Z"
+    labels:
+      app: infocepo-mcp
+    name: infocepo-mcp-proxy
+    namespace: demo1
+    resourceVersion: "28388047"
+    uid: 0dff4042-ed92-4462-b189-37eb3a268b21
+  spec:
+    clusterIP: 10.152.183.63
+    clusterIPs:
+    - 10.152.183.63
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      nodePort: 30910
+      port: 9100
+      protocol: TCP
+      targetPort: 9100
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"infocepo-mcp-proxy-host","namespace":"demo1"},"spec":{"externalIPs":["10.0.1.1"],"ports":[{"port":9100,"protocol":"TCP","targetPort":9100}],"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-10T18:41:03Z"
+    name: infocepo-mcp-proxy-host
+    namespace: demo1
+    resourceVersion: "28388017"
+    uid: 77568a1a-957e-4787-ac4a-b9fafecf9469
+  spec:
+    clusterIP: 10.152.183.194
+    clusterIPs:
+    - 10.152.183.194
+    externalIPs:
+    - 10.0.1.1
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 9100
+      protocol: TCP
+      targetPort: 9100
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"infra-dashboard-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"infra-dashboard"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:25:12Z"
+    name: infra-dashboard-svc
+    namespace: demo1
+    resourceVersion: "22291959"
+    uid: c23ee75c-3eee-4c1c-bc87-b75475e0721d
+  spec:
+    clusterIP: 10.152.183.239
+    clusterIPs:
+    - 10.152.183.239
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: infra-dashboard
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"infra-dashboard-v2-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"infra-dashboard-v2"}}}
+    creationTimestamp: "2026-08-13T14:03:38Z"
+    name: infra-dashboard-v2-svc
+    namespace: demo1
+    resourceVersion: "28899455"
+    uid: 80a7a79f-6eb8-4fe0-9c79-312c5e95ac16
+  spec:
+    clusterIP: 10.152.183.119
+    clusterIPs:
+    - 10.152.183.119
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: infra-dashboard-v2
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"keycloak-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":8080}],"selector":{"app.kubernetes.io/name":"keycloak"}}}
+    creationTimestamp: "2026-07-24T17:17:47Z"
+    name: keycloak-svc
+    namespace: demo1
+    resourceVersion: "25177651"
+    uid: 0e760e51-f111-4492-b034-acaa84748996
+  spec:
+    clusterIP: 10.152.183.228
+    clusterIPs:
+    - 10.152.183.228
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app.kubernetes.io/name: keycloak
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"linkflow","namespace":"demo1"},"spec":{"clusterIP":"10.152.183.68","internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"linkflow"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
+    creationTimestamp: "2026-07-08T21:25:13Z"
+    name: linkflow
+    namespace: demo1
+    resourceVersion: "22283390"
+    uid: 91e88335-6fed-4ead-b313-a152321cd15e
+  spec:
+    clusterIP: 10.152.183.68
+    clusterIPs:
+    - 10.152.183.68
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: linkflow
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"links"},"name":"links-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"links"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-21T12:06:16Z"
+    labels:
+      app: links
+    name: links-svc
+    namespace: demo1
+    resourceVersion: "30331509"
+    uid: bde9e9f7-2206-4ec0-ab79-63e9d130885c
+  spec:
+    clusterIP: 10.152.183.32
+    clusterIPs:
+    - 10.152.183.32
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: links
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mcp-nginx-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"mcp-nginx-proxy"}}}
+    creationTimestamp: "2026-08-10T18:47:08Z"
+    name: mcp-nginx-svc
+    namespace: demo1
+    resourceVersion: "28388388"
+    uid: a24ffc56-4562-4070-a3aa-4dcad2fe3cbf
+  spec:
+    clusterIP: 10.152.183.226
+    clusterIPs:
+    - 10.152.183.226
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: mcp-nginx-proxy
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mcp-proxy-host","namespace":"demo1"},"spec":{"ports":[{"port":9100,"protocol":"TCP","targetPort":9100}]}}
+    creationTimestamp: "2026-08-10T18:45:41Z"
+    name: mcp-proxy-host
+    namespace: demo1
+    resourceVersion: "28388176"
+    uid: 292922af-f96d-426f-a4aa-94e7d0ad79e7
+  spec:
+    clusterIP: 10.152.183.49
+    clusterIPs:
+    - 10.152.183.49
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 9100
+      protocol: TCP
+      targetPort: 9100
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mcp-server","namespace":"demo1"},"spec":{"ports":[{"port":5008,"targetPort":5008}],"selector":{"app":"mcp-server"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:11:58Z"
+    name: mcp-server
+    namespace: demo1
+    resourceVersion: "22279039"
+    uid: fdaf58a4-13ab-4dc9-bd5c-357bd0326fb2
+  spec:
+    clusterIP: 10.152.183.87
+    clusterIPs:
+    - 10.152.183.87
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5008
+      protocol: TCP
+      targetPort: 5008
+    selector:
+      app: mcp-server
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"minio-svc","namespace":"demo1"},"spec":{"ports":[{"name":"api","port":9000,"targetPort":9000},{"name":"console","port":9001,"targetPort":9001}],"selector":{"app":"minio"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-10T07:47:16Z"
+    name: minio-svc
+    namespace: demo1
+    resourceVersion: "22569165"
+    uid: a9a01d7f-9376-4a46-8bab-db23e10173eb
+  spec:
+    clusterIP: 10.152.183.253
+    clusterIPs:
+    - 10.152.183.253
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: api
+      port: 9000
+      protocol: TCP
+      targetPort: 9000
+    - name: console
+      port: 9001
+      protocol: TCP
+      targetPort: 9001
+    selector:
+      app: minio
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"model-tracker-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"model-tracker"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:26:16Z"
+    name: model-tracker-svc
+    namespace: demo1
+    resourceVersion: "30840523"
+    uid: eaca13da-4caa-453b-9231-df837fe167b7
+  spec:
+    clusterIP: 10.152.183.24
+    clusterIPs:
+    - 10.152.183.24
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: model-tracker
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"moulineuse"},"name":"moulineuse-svc","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":3000,"targetPort":3000}],"selector":{"app":"moulineuse"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:16:29Z"
+    labels:
+      app: moulineuse
+    name: moulineuse-svc
+    namespace: demo1
+    resourceVersion: "33437995"
+    uid: 66378d5c-9e23-427d-9a0f-2c8d272e46a5
+  spec:
+    clusterIP: 10.152.183.209
+    clusterIPs:
+    - 10.152.183.209
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app: moulineuse
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"news-2026-09-04-ailab-infocepo-com"},"name":"news-2026-09-04-ailab-infocepo-com-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"news-2026-09-04-ailab-infocepo-com"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-04T11:35:06Z"
+    labels:
+      app: news-2026-09-04-ailab-infocepo-com
+    name: news-2026-09-04-ailab-infocepo-com-svc
+    namespace: demo1
+    resourceVersion: "32913604"
+    uid: 79a5b5ad-8752-4a6a-b48f-9ad13a1503af
+  spec:
+    clusterIP: 10.152.183.21
+    clusterIPs:
+    - 10.152.183.21
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: news-2026-09-04-ailab-infocepo-com
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"news-aggregator"},"name":"news-aggregator","namespace":"demo1"},"spec":{"clusterIP":"None","ports":[{"name":"http","port":80,"targetPort":8080}],"selector":{"app":"news-aggregator"}}}
+    creationTimestamp: "2026-09-03T22:41:50Z"
+    labels:
+      app: news-aggregator
+    name: news-aggregator
+    namespace: demo1
+    resourceVersion: "32816851"
+    uid: 7aa18015-f10c-41ea-b8e6-6aa575a37374
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: news-aggregator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"onboarding","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"onboarding"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-09T00:10:41Z"
+    name: onboarding
+    namespace: demo1
+    resourceVersion: "22318762"
+    uid: be5ce6cb-4b6c-466f-95f8-a5b3a4cb86f2
+  spec:
+    clusterIP: 10.152.183.83
+    clusterIPs:
+    - 10.152.183.83
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: onboarding-deploy
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: onyxia
+      meta.helm.sh/release-namespace: demo1
+    creationTimestamp: "2026-08-01T22:27:53Z"
+    labels:
+      app.kubernetes.io/instance: onyxia
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: onyxia-api
+      helm.sh/chart: onyxia-api
+    name: onyxia-api
+    namespace: demo1
+    resourceVersion: "26778646"
+    uid: fca5c6f7-faff-4c0d-8622-08bcd03fa950
+  spec:
+    clusterIP: 10.152.183.141
+    clusterIPs:
+    - 10.152.183.141
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+    selector:
+      app.kubernetes.io/instance: onyxia
+      app.kubernetes.io/name: onyxia-api
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: onyxia
+      meta.helm.sh/release-namespace: demo1
+    creationTimestamp: "2026-08-01T22:27:53Z"
+    labels:
+      app.kubernetes.io/instance: onyxia
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: onyxia-web
+      helm.sh/chart: onyxia-web
+    name: onyxia-web
+    namespace: demo1
+    resourceVersion: "26778649"
+    uid: 46d1fc74-973d-4c2d-83be-1fd18a1b6b6d
+  spec:
+    clusterIP: 10.152.183.118
+    clusterIPs:
+    - 10.152.183.118
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+    selector:
+      app.kubernetes.io/instance: onyxia
+      app.kubernetes.io/name: onyxia-web
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"openmed","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"openmed-api"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-09T00:13:16Z"
+    name: openmed
+    namespace: demo1
+    resourceVersion: "22319019"
+    uid: af93eaf1-f7f4-4dc7-9e4e-c2f309ccb1d3
+  spec:
+    clusterIP: 10.152.183.101
+    clusterIPs:
+    - 10.152.183.101
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: openmed-api
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"oracle-monitor","namespace":"demo1"},"spec":{"ports":[{"port":8080,"protocol":"TCP","targetPort":8080}],"selector":{"app":"oracle-monitor"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T23:55:47Z"
+    name: oracle-monitor
+    namespace: demo1
+    resourceVersion: "22316690"
+    uid: bedcd89f-f4a5-4bd1-94c2-2af6d0f95cc8
+  spec:
+    clusterIP: 10.152.183.242
+    clusterIPs:
+    - 10.152.183.242
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: oracle-monitor
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"oss-models-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"oss-models"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-03T20:38:18Z"
+    name: oss-models-svc
+    namespace: demo1
+    resourceVersion: "32800737"
+    uid: fbcfcdd4-39dd-46ca-b35f-3739e8193154
+  spec:
+    clusterIP: 10.152.183.55
+    clusterIPs:
+    - 10.152.183.55
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: oss-models
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"owui-external-functions"},"name":"owui-external-functions-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"owui-external-functions"}}}
+    creationTimestamp: "2026-07-16T19:26:31Z"
+    labels:
+      app: owui-external-functions
+    name: owui-external-functions-svc
+    namespace: demo1
+    resourceVersion: "23722502"
+    uid: 5c5d81e4-4b2b-4f87-b7f8-d1ea66fa30cd
+  spec:
+    clusterIP: 10.152.183.169
+    clusterIPs:
+    - 10.152.183.169
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: owui-external-functions
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"pdf-inspector-web-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"pdf-inspector-web"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-21T12:00:39Z"
+    name: pdf-inspector-web-svc
+    namespace: demo1
+    resourceVersion: "30330655"
+    uid: 79867e0c-23fd-455b-9682-0f4136855be7
+  spec:
+    clusterIP: 10.152.183.173
+    clusterIPs:
+    - 10.152.183.173
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: pdf-inspector-web
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"privacy-benchmark"},"name":"privacy-benchmark-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"privacy-benchmark"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:26:17Z"
+    labels:
+      app: privacy-benchmark
+    name: privacy-benchmark-svc
+    namespace: demo1
+    resourceVersion: "22284542"
+    uid: d4748d00-d790-4449-8782-41800dca13a3
+  spec:
+    clusterIP: 10.152.183.117
+    clusterIPs:
+    - 10.152.183.117
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: privacy-benchmark
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"profit-employee-service","namespace":"demo1"},"spec":{"clusterIP":"10.152.183.70","internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"profit-employee"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
+    creationTimestamp: "2026-07-08T21:25:17Z"
+    name: profit-employee-service
+    namespace: demo1
+    resourceVersion: "22283510"
+    uid: 62b11938-0658-48d0-a7c4-f633937061e8
+  spec:
+    clusterIP: 10.152.183.70
+    clusterIPs:
+    - 10.152.183.70
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: profit-employee
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"rag-bench-svc","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":80,"targetPort":80}],"selector":{"app":"rag-bench"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-10T09:47:48Z"
+    name: rag-bench-svc
+    namespace: demo1
+    resourceVersion: "28320246"
+    uid: 58dda7a7-2520-4668-a103-e9f797a0736b
+  spec:
+    clusterIP: 10.152.183.34
+    clusterIPs:
+    - 10.152.183.34
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: rag-bench
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"rag-eval-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"rag-eval"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-12T14:34:26Z"
+    name: rag-eval-svc
+    namespace: demo1
+    resourceVersion: "28717647"
+    uid: 201b6a90-29e0-408f-9c63-3298908d99f4
+  spec:
+    clusterIP: 10.152.183.88
+    clusterIPs:
+    - 10.152.183.88
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: rag-eval
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"rag-openwebui-article-svc","namespace":"demo1"},"spec":{"clusterIP":"10.152.183.166","internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"rag-openwebui-article"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
+    creationTimestamp: "2026-07-08T21:25:18Z"
+    name: rag-openwebui-article-svc
+    namespace: demo1
+    resourceVersion: "22283522"
+    uid: 90f1c5e9-60b7-476b-b8ca-ebe50192de74
+  spec:
+    clusterIP: 10.152.183.166
+    clusterIPs:
+    - 10.152.183.166
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: rag-openwebui-article
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"registry"},"name":"registry","namespace":"demo1"},"spec":{"ports":[{"port":5000,"protocol":"TCP","targetPort":5000}],"selector":{"app":"registry"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:31:11Z"
+    labels:
+      app: registry
+    name: registry
+    namespace: demo1
+    resourceVersion: "33440972"
+    uid: ffd12111-ae50-44d5-97b2-bdf01c18c65f
+  spec:
+    clusterIP: 10.152.183.109
+    clusterIPs:
+    - 10.152.183.109
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5000
+      protocol: TCP
+      targetPort: 5000
+    selector:
+      app: registry
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"registry-svc","namespace":"demo1"},"spec":{"ports":[{"port":5000,"protocol":"TCP","targetPort":5000}],"selector":{"app":"registry"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-08T21:25:18Z"
+    name: registry-svc
+    namespace: demo1
+    resourceVersion: "25980961"
+    uid: 5f7e6907-f394-4c1e-b146-adb90e91a4e6
+  spec:
+    clusterIP: 10.152.183.232
+    clusterIPs:
+    - 10.152.183.232
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5000
+      protocol: TCP
+      targetPort: 5000
+    selector:
+      app: registry-svc
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"signalement-citoyen-svc","namespace":"demo1"},"spec":{"clusterIP":"10.152.183.45","internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"signalement-citoyen"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
+    creationTimestamp: "2026-07-08T21:25:19Z"
+    name: signalement-citoyen-svc
+    namespace: demo1
+    resourceVersion: "22283577"
+    uid: 34f86623-a6b1-4750-a4b4-ac141594bdee
+  spec:
+    clusterIP: 10.152.183.45
+    clusterIPs:
+    - 10.152.183.45
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: signalement-citoyen
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"superset-postgres"},"name":"superset-postgres","namespace":"demo1"},"spec":{"ports":[{"port":5432,"targetPort":5432}],"selector":{"app":"superset-postgres"}}}
+    creationTimestamp: "2026-09-03T13:34:11Z"
+    labels:
+      app: superset-postgres
+    name: superset-postgres
+    namespace: demo1
+    resourceVersion: "32742682"
+    uid: 3faa9964-562e-4c40-bbab-54a365779314
+  spec:
+    clusterIP: 10.152.183.245
+    clusterIPs:
+    - 10.152.183.245
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5432
+      protocol: TCP
+      targetPort: 5432
+    selector:
+      app: superset-postgres
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"superset-redis"},"name":"superset-redis","namespace":"demo1"},"spec":{"ports":[{"port":6379,"targetPort":6379}],"selector":{"app":"superset-redis"}}}
+    creationTimestamp: "2026-09-03T15:43:33Z"
+    labels:
+      app: superset-redis
+    name: superset-redis
+    namespace: demo1
+    resourceVersion: "32761701"
+    uid: c3a142aa-2a16-4f7e-9119-fadbdd595fa7
+  spec:
+    clusterIP: 10.152.183.104
+    clusterIPs:
+    - 10.152.183.104
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 6379
+      protocol: TCP
+      targetPort: 6379
+    selector:
+      app: superset-redis
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"superset"},"name":"superset-svc","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":8088,"targetPort":8088}],"selector":{"app":"superset"}}}
+    creationTimestamp: "2026-09-03T15:43:33Z"
+    labels:
+      app: superset
+    name: superset-svc
+    namespace: demo1
+    resourceVersion: "32761714"
+    uid: 3e6f4580-4ba1-4a73-b6f8-4e0838f5794a
+  spec:
+    clusterIP: 10.152.183.163
+    clusterIPs:
+    - 10.152.183.163
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8088
+      protocol: TCP
+      targetPort: 8088
+    selector:
+      app: superset
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"test-infocepo-com-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"test-infocepo-com"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-04T23:50:01Z"
+    name: test-infocepo-com-svc
+    namespace: demo1
+    resourceVersion: "33007603"
+    uid: 2b65c1e4-db7c-4670-bdeb-c546b3a4e432
+  spec:
+    clusterIP: 10.152.183.191
+    clusterIPs:
+    - 10.152.183.191
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: test-infocepo-com
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"tika-service","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":9998,"protocol":"TCP","targetPort":9998}],"selector":{"app":"tika"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-04T13:10:29Z"
+    name: tika-service
+    namespace: demo1
+    resourceVersion: "27248677"
+    uid: 36851870-cea4-473f-a438-93dab971ce3e
+  spec:
+    clusterIP: 10.152.183.27
+    clusterIPs:
+    - 10.152.183.27
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 9998
+      protocol: TCP
+      targetPort: 9998
+    selector:
+      app: tika
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"trafilatura","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":8990,"targetPort":8990}],"selector":{"app":"trafilatura"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-01T15:58:11Z"
+    name: trafilatura
+    namespace: demo1
+    resourceVersion: "32401752"
+    uid: 9ed45741-1587-426d-8201-c814bbb4b871
+  spec:
+    clusterIP: 10.152.183.233
+    clusterIPs:
+    - 10.152.183.233
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8990
+      protocol: TCP
+      targetPort: 8990
+    selector:
+      app: trafilatura
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"trends-dashboard-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"trends-dashboard"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-14T12:56:35Z"
+    name: trends-dashboard-svc
+    namespace: demo1
+    resourceVersion: "29070246"
+    uid: 347369bf-a2c1-4e1a-973c-ee0d7dfb0e65
+  spec:
+    clusterIP: 10.152.183.236
+    clusterIPs:
+    - 10.152.183.236
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: trends-dashboard
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"tricoteuses-exploratrice"},"name":"tricoteuses-exploratrice","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":3000}],"selector":{"app":"tricoteuses-exploratrice"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:43:20Z"
+    labels:
+      app: tricoteuses-exploratrice
+    name: tricoteuses-exploratrice
+    namespace: demo1
+    resourceVersion: "33442965"
+    uid: d7837b27-d63a-472d-829c-b2ce66c692c1
+  spec:
+    clusterIP: 10.152.183.247
+    clusterIPs:
+    - 10.152.183.247
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app: tricoteuses-exploratrice
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"tricoteuses-moulineuse"},"name":"tricoteuses-moulineuse","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":8000}],"selector":{"app":"tricoteuses-moulineuse"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:43:20Z"
+    labels:
+      app: tricoteuses-moulineuse
+    name: tricoteuses-moulineuse
+    namespace: demo1
+    resourceVersion: "33442935"
+    uid: 96c07ed2-40d5-4e64-8809-54a88952a5f1
+  spec:
+    clusterIP: 10.152.183.114
+    clusterIPs:
+    - 10.152.183.114
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8000
+    selector:
+      app: tricoteuses-moulineuse
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"tricoteuses-postgres"},"name":"tricoteuses-postgres","namespace":"demo1"},"spec":{"ports":[{"port":5432,"protocol":"TCP","targetPort":5432}],"selector":{"app":"tricoteuses-postgres"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:43:20Z"
+    labels:
+      app: tricoteuses-postgres
+    name: tricoteuses-postgres
+    namespace: demo1
+    resourceVersion: "33442885"
+    uid: 0c475b56-c554-44bf-8860-f5702bd65cff
+  spec:
+    clusterIP: 10.152.183.172
+    clusterIPs:
+    - 10.152.183.172
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5432
+      protocol: TCP
+      targetPort: 5432
+    selector:
+      app: tricoteuses-postgres
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"tricoteuses-registry"},"name":"tricoteuses-registry","namespace":"demo1"},"spec":{"ports":[{"port":5000,"protocol":"TCP","targetPort":5000}],"selector":{"app":"tricoteuses-registry"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:39:42Z"
+    labels:
+      app: tricoteuses-registry
+    name: tricoteuses-registry
+    namespace: demo1
+    resourceVersion: "33442216"
+    uid: 72ac6d6c-e7c0-4918-b616-bd7d8e7f4b5e
+  spec:
+    clusterIP: 10.152.183.238
+    clusterIPs:
+    - 10.152.183.238
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5000
+      protocol: TCP
+      targetPort: 5000
+    selector:
+      app: tricoteuses-registry
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"tricoteuses-typesense"},"name":"tricoteuses-typesense","namespace":"demo1"},"spec":{"ports":[{"port":8108,"protocol":"TCP","targetPort":8108}],"selector":{"app":"tricoteuses-typesense"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-09-07T09:43:20Z"
+    labels:
+      app: tricoteuses-typesense
+    name: tricoteuses-typesense
+    namespace: demo1
+    resourceVersion: "33442912"
+    uid: 70ed3427-629a-40ac-a101-ee5c8384676b
+  spec:
+    clusterIP: 10.152.183.175
+    clusterIPs:
+    - 10.152.183.175
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 8108
+      protocol: TCP
+      targetPort: 8108
+    selector:
+      app: tricoteuses-typesense
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"ttyd-service-0f85b9f9","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":7681}],"selector":{"app":"ttyd","instance":"0f85b9f9"}}}
+    creationTimestamp: "2026-07-23T22:24:46Z"
+    name: ttyd-service-0f85b9f9
+    namespace: demo1
+    resourceVersion: "25028639"
+    uid: 2fd9691c-bc3d-4b35-be81-f015b59b96f5
+  spec:
+    clusterIP: 10.152.183.192
+    clusterIPs:
+    - 10.152.183.192
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 7681
+    selector:
+      app: ttyd
+      instance: 0f85b9f9
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"ttyd-service-8df54a8f","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":7681}],"selector":{"app":"ttyd","instance":"8df54a8f"}}}
+    creationTimestamp: "2026-07-23T22:58:43Z"
+    name: ttyd-service-8df54a8f
+    namespace: demo1
+    resourceVersion: "25033207"
+    uid: e3087a86-18ca-4934-b35b-67864964779f
+  spec:
+    clusterIP: 10.152.183.181
+    clusterIPs:
+    - 10.152.183.181
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 7681
+    selector:
+      app: ttyd
+      instance: 8df54a8f
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"veille-dashboard"},"name":"veille-dashboard","namespace":"demo1"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"veille-dashboard"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-23T23:25:24Z"
+    labels:
+      app: veille-dashboard
+    name: veille-dashboard
+    namespace: demo1
+    resourceVersion: "30789051"
+    uid: d45f5664-c9fb-42db-ac34-62bd161d3d0a
+  spec:
+    clusterIP: 10.152.183.142
+    clusterIPs:
+    - 10.152.183.142
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: veille-dashboard
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"wiki-onboarding","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"wiki-onboarding"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-07-13T22:21:57Z"
+    name: wiki-onboarding
+    namespace: demo1
+    resourceVersion: "23210844"
+    uid: c86ca087-5cdf-4070-8fc9-cf98d2a9ba10
+  spec:
+    clusterIP: 10.152.183.224
+    clusterIPs:
+    - 10.152.183.224
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: wiki-onboarding
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"ynotopec-svc","namespace":"demo1"},"spec":{"ports":[{"name":"http","port":8787,"targetPort":8787}]}}
+    creationTimestamp: "2026-07-24T13:38:26Z"
+    name: ynotopec-svc
+    namespace: demo1
+    resourceVersion: "25145906"
+    uid: 7d1f43a9-18e8-43f9-8383-f13ae9273fb1
+  spec:
+    clusterIP: 10.152.183.48
+    clusterIPs:
+    - 10.152.183.48
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8787
+      protocol: TCP
+      targetPort: 8787
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"zedsd-svc","namespace":"demo1"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"zedsd"},"type":"ClusterIP"}}
+    creationTimestamp: "2026-08-25T12:33:30Z"
+    name: zedsd-svc
+    namespace: demo1
+    resourceVersion: "31080715"
+    uid: 026b811d-29d7-4798-8a65-ebd3a1a51c42
+  spec:
+    clusterIP: 10.152.183.244
+    clusterIPs:
+    - 10.152.183.244
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: zedsd
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""

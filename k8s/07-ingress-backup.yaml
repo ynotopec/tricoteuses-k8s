@@ -1,0 +1,49 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"cert-manager.io/cluster-issuer":"letsencrypt-prod","nginx.ingress.kubernetes.io/proxy-body-size":"50m","nginx.ingress.kubernetes.io/proxy-read-timeout":"3600","nginx.ingress.kubernetes.io/proxy-send-timeout":"3600","nginx.ingress.kubernetes.io/ssl-redirect":"true"},"name":"tricoteuses-ingress","namespace":"demo1"},"spec":{"ingressClassName":"public","rules":[{"host":"exploratrice.demo1.ailab.infocepo.com","http":{"paths":[{"backend":{"service":{"name":"tricoteuses-exploratrice","port":{"number":80}}},"path":"/","pathType":"Prefix"}]}},{"host":"moulineuse.demo1.ailab.infocepo.com","http":{"paths":[{"backend":{"service":{"name":"tricoteuses-moulineuse","port":{"number":8000}}},"path":"/","pathType":"Prefix"}]}}],"tls":[{"hosts":["exploratrice.demo1.ailab.infocepo.com","moulineuse.demo1.ailab.infocepo.com"],"secretName":"tricoteuses-tls"}]}}
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  creationTimestamp: "2026-09-07T11:30:46Z"
+  generation: 1
+  name: tricoteuses-ingress
+  namespace: demo1
+  resourceVersion: "33458650"
+  uid: 4807799e-c4c8-42aa-9e67-619efd4d075a
+spec:
+  ingressClassName: public
+  rules:
+  - host: exploratrice.demo1.ailab.infocepo.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: tricoteuses-exploratrice
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  - host: moulineuse.demo1.ailab.infocepo.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: tricoteuses-moulineuse
+            port:
+              number: 8000
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - exploratrice.demo1.ailab.infocepo.com
+    - moulineuse.demo1.ailab.infocepo.com
+    secretName: tricoteuses-tls
+status:
+  loadBalancer:
+    ingress:
+    - ip: 10.10.0.128
